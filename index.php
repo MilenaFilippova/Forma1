@@ -31,6 +31,7 @@ switch(getenv('REQUEST_METHOD'))
 				'email'=> trim(array_get($_POST,'email', '')),
 				'tema'=> trim(array_get($_POST,'tema', '')),
 				'pay'=> trim(array_get($_POST,'pay', '')),
+				'agree'=> trim(array_get($_POST,'agree', '')),
 				
 			];
 			
@@ -54,6 +55,7 @@ switch(getenv('REQUEST_METHOD'))
 					'email' => $fields['email'],
 					'tema' => $fields['tema'],
 					'pay' => $fields['pay'],
+					'agree' => $fields['agree'],
 					]);
 
 				
