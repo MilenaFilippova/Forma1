@@ -31,7 +31,7 @@ switch(getenv('REQUEST_METHOD'))
 				$id=basename($file, '.json');	 //Возвращает имя файла из указанного пути
 				$data[$id]=json_decode(file_get_contents($file),true);
 			}
-			include 'admin-edit.php';
+			include '/templates/admin-edit.php';
 		}
 		break;
 	
@@ -65,7 +65,7 @@ switch(getenv('REQUEST_METHOD'))
 		$filename = date('Y-m-d-H-i-s') . '-' . rand(010, 99) . '.json';
 		file_put_contents("data\\".$filename, $contents);
 		header('Location: header.php');
-		include 'admin-edit.php';
+		include '/templates/admin-edit.php';
 		exit;
 	}
 }
